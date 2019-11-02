@@ -27,9 +27,21 @@ class YouTubeDebugger extends React.Component {
     });
   }
 
+  handleVidClick =() => {
+    this.setState({
+      settings: {
+        ...this.state.settings,
+        video: {
+          resolution: '720p'
+        }
+      }
+    });
+  }
+
   render() {
     return (
-      <button onClick={this.handleBRClick}className="bitrate"></button>
+      <button onClick={this.handleBRClick} className='bitrate'></button>
+      <button onClick={this.handleVidClick} className='resolution'></button>
     )
   }
 }
